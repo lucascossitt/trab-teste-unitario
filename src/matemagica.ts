@@ -1,8 +1,8 @@
-import {ErrorMessages} from "./errormessages.enum"
+import {ErrorMessages} from "./ErrorMessages"
 
 export class Matemagica {
-    public x: number
-    public y: number
+    private x: number
+    private y: number
 
     public getSum() {
         return this.Sum()
@@ -10,6 +10,14 @@ export class Matemagica {
 
     public getSub() {
         return this.Sub()
+    }
+
+    public getMultiply() {
+        return this.Multiply()
+    }
+
+    public getDivision() {
+        return this.Division()
     }
 
     public setX(x: Number) {
@@ -27,11 +35,11 @@ export class Matemagica {
     }
 
     public getX() {
-        return console.log(this.x)
+        return this.x
     }
 
     public getY() {
-        return console.log(this.y)
+        return this.y
     }
 
     private Sum() {
@@ -40,6 +48,14 @@ export class Matemagica {
 
     private Sub() {
         return this.x - this.y
+    }
+
+    private Multiply() {
+        return this.x * this.y
+    }
+
+    private Division() {
+        return this.x / this.y
     }
 }
 
